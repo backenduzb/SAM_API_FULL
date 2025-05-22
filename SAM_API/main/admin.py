@@ -13,7 +13,8 @@ class UserAdmin(admin.ModelAdmin):
         'asosan_qoniqaman', 'qoniqmayman', 'umuman_qoniqaman',
         'telegram_id'
     )
-    list_filter = ('full_name', CustomUpdatedAtFilter)
+    list_filter = ('full_name', CustomUpdatedAtFilter, 'topics')
+
     change_list_template = 'teacherusersstats_change_list.html'
 
     def get_topics(self, obj):
@@ -21,7 +22,6 @@ class UserAdmin(admin.ModelAdmin):
     get_topics.short_description = "Fanlar"  
 
 admin.site.register(TeacherUsersStats, UserAdmin)
-
 
 @admin.register(TeacherTopic)
 class TeacherTopicAdmin(admin.ModelAdmin):
