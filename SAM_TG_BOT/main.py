@@ -23,16 +23,3 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
-
-# import requests
-
-# # API endpoint
-# edited_url = "http://localhost:8000/api/teacher-users-stats/80/"
-
-# # To'g'rilangan ma'lumotlar
-# data = {
-#     "umuman_qoniqaman": 1  # Field nomini to'g'riladim
-# }
-
-# # PUT so'rovini yuborish
-# response = requests.put(edited_url, json=data)
