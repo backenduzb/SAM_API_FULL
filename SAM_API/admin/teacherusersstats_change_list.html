@@ -1,0 +1,32 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools %}
+    {{ block.super }}
+    <li>
+        <form action="{% url 'get-excel' %}" method="get" style="display:flex;">
+            <button type="submit" class="button" >Yuklab olish</button>
+        </form>
+    </li>
+    <style>
+        .button {
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            padding: 5px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+{% endblock %}
